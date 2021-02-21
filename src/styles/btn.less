@@ -1,0 +1,83 @@
+@import './color.less';
+
+.colorBtn (@color) {
+  background: @color;
+  &:hover {
+    color: @color;
+    &:before,
+    &:after {
+      background: @color;
+    }
+  }
+}
+
+.blue-btn {
+  .colorBtn(@blue);
+}
+
+.light-blue-btn {
+  .colorBtn(@light-blue);
+}
+
+.red-btn {
+  .colorBtn(@red);
+}
+
+.pink-btn {
+  .colorBtn(@pink);
+}
+
+.green-btn {
+  .colorBtn(@green);
+}
+
+.tiffany-btn {
+  .colorBtn(@tiffany);
+}
+
+.yellow-btn {
+  .colorBtn(@yellow);
+}
+
+.gray-btn {
+  .colorBtn(@gray);
+}
+
+.pan-btn {
+  font-size: 14px;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  // margin-right: 10px;
+  transition: 600ms ease all;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  &:hover {
+    background: #fff;
+    &:before,
+    &:after {
+      width: 100%;
+      transition: 600ms ease all;
+    }
+  }
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    transition: 400ms ease all;
+  }
+  &::after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+  }
+}
+
