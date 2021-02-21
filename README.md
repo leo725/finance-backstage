@@ -1,4 +1,4 @@
-# dealer-finance
+# finance-backstage
 
 ## Project setup
 ```
